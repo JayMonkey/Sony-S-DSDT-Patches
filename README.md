@@ -1,8 +1,12 @@
 Sony-S-DSDT-Patches
 ===================
 
-I am currentley writing a series of DSDT patches for Sony Vaio S Series Laptops
-These patches will allow for native OSX Mavericks
+I am currentley working on a series of DSDT patches for use with MaciASL
+I recomend using ReHabMan's version available for download here :-
+
+https://github.com/RehabMan/OS-X-MaciASL-patchmatic
+
+These patches will allow for clean running of OSX Mavericks on VPC-SE25CE
 
 Still in Development
 Jay
