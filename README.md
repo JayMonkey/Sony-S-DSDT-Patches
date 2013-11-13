@@ -1,7 +1,7 @@
 Sony-S-DSDT-Patches
 ===================
 
-I am currentley working on a series of DSDT patches for use with MaciASL/n
+I am currentley working on a series of DSDT patches for use with MaciASL
 I recomend using ReHabMan's version available for download here :-
 
 https://github.com/RehabMan/OS-X-MaciASL-patchmatic
