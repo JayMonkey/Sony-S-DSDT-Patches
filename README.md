@@ -11,7 +11,7 @@ To use these patches add the following repo info into MaciASL:-
 
 http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/tree/master
 
-In addition to my DSDT paches you wil also need to use ReHabMans Generic DSDT paches by adding his repo to MaciASL:-
+In addition to my DSDT paches you wil also need to use ReHabMans Generic DSDT paches by also adding his repo to MaciASL:-
 
 http://raw.github.com/RehabMan/Laptop-DSDT-Patch/master
 
