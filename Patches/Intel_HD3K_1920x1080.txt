@@ -1,0 +1,68 @@
+# Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
+# Intel_HD3K_1920x1080.txt
+
+# Use this patch if your laptop has 1920x1020 Resolution Display
+# Inject HDMI & EDID  & dual-link into GFX0/IGPU
+
+into method label _DSM parent_adr 0x00020000 remove_entry;
+into device name_adr 0x00020000 insert
+begin
+Method (_DSM, 4, NotSerialized)\
+            {\n
+                Store (Package (0x0C)\n
+                    {\n
+                        "AAPL,NumFramebuffers",\n
+                        Buffer (0x04)\n
+                        {\n
+                            0x03, 0x00, 0x00, 0x00\n
+                        },\n
+\n
+                        "device-id",\n
+                        Buffer (0x04)\n
+                        {\n
+                            0x16, 0x01, 0x00, 0x00\n
+                        },\n
+\n
+                        "AAPL00,DualLink",\n
+                        Buffer (0x04)\n
+                        {\n
+                            0x01, 0x00, 0x00, 0x00\n
+                        },\n
+\n
+                        "hda-gfx",\n
+                        Buffer (0x0A)\n
+                        {\n
+                            "onboard-2"\n
+                        },\n
+\n
+                        "AAPL,snb-platform-id",\n
+                        Buffer (0x04)\n
+                        {\n
+                            0x00, 0x00, 0x01, 0x00\n
+                        }, \n
+\n
+                        "AAPL00,override-no-edid",\n
+                        Buffer (0x80)\n
+                        {\n
+                            /* 0000 */    0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,\n
+                            /* 0008 */    0x36, 0x7F, 0x25, 0x00, 0x0F, 0x00, 0x00, 0x00,\n
+                            /* 0010 */    0x00, 0x0C, 0x01, 0x03, 0x80, 0x22, 0x13, 0xFF,\n
+                            /* 0018 */    0x2F, 0x00, 0x00, 0xA0, 0x57, 0x49, 0x9B, 0x26,\n
+                            /* 0020 */    0x10, 0x48, 0x4F, 0x00, 0x00, 0x00, 0x01, 0x01,\n
+                            /* 0028 */    0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,\n
+                            /* 0030 */    0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x54, 0x38,\n
+                            /* 0038 */    0x80, 0xC4, 0x70, 0x38, 0x39, 0x40, 0x30, 0x48,\n
+                            /* 0040 */    0x35, 0x00, 0x58, 0xC2, 0x10, 0x00, 0x00, 0x18,\n
+                            /* 0048 */    0x54, 0x38, 0x80, 0xE0, 0x71, 0x38, 0x7A, 0x40,\n
+                            /* 0050 */    0x30, 0x48, 0x35, 0x00, 0x58, 0xC2, 0x10, 0x00,\n
+                            /* 0058 */    0x00, 0x18, 0x54, 0x29, 0x80, 0x68, 0x71, 0x38,\n
+                            /* 0060 */    0x50, 0x40, 0x30, 0x48, 0x35, 0x00, 0x58, 0xC2,\n
+                            /* 0068 */    0x10, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x00,\n
+                            /* 0070 */    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,\n
+                            /* 0078 */    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7\n
+                        }\n
+                    }, Local0)/n
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
+                Return (Local0)\n
+\n
+end;

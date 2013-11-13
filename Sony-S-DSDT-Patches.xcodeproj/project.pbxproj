@@ -6,11 +6,28 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Battery_Sony-VAIO-S.txt"; sourceTree = "<group>"; };
+		693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1920x1080.txt; sourceTree = "<group>"; };
+		693BEE611833F3B6005F9395 /* NullPatch.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = NullPatch.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		693BEE571833F295005F9395 = {
 			isa = PBXGroup;
 			children = (
+				693BEE5E1833F3B6005F9395 /* Patches */,
 			);
+			sourceTree = "<group>";
+		};
+		693BEE5E1833F3B6005F9395 /* Patches */ = {
+			isa = PBXGroup;
+			children = (
+				693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S.txt */,
+				693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */,
+				693BEE611833F3B6005F9395 /* NullPatch.txt */,
+			);
+			path = Patches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
