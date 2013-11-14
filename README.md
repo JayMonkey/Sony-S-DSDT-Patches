@@ -1,5 +1,5 @@
-Sony-S-DSDT-Patches
-===================
+Sony Vaio-S DSDT Patches
+========================
 
 I am currently working on a series of DSDT patches for use with MaciASL (or anther DSDT editor). However I recommend using ReHabMan's fork of MaciASL available for download here :-
 
