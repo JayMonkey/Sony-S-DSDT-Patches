@@ -1,3 +1,3 @@
-===== Sony Vaio S Series DSDT Patches =====     patches/NullPatch.txt
-Insert EDID data for 1920x1080 Display          patches/Intel_HD3K_1920x1080.txt
-Modify Battery Registers to 8-Bit Values        patches/Battery_Sony-VAIO-S.txt
+===== Sony Vaio S Series DSDT Patches ===== DSDT    Patches/NullPatch.txt
+Insert EDID data for 1920x1080 Display  DSDT    Patches/Intel_HD3K_1920x1080.txt
+Modify Battery Registers to 8-Bit Values    DSDT    Patches/Battery_Sony-VAIO-S.txt
