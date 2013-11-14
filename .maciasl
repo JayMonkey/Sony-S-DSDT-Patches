@@ -1,2 +1,2 @@
-Insert EDID data for 1920x1080 Display      DSDT        Patches/Intel_HD3K_1920x1080.txt
-Modify Battery Registers to 8-Bit Values        DSDT        Patches/Battery_Sony-VAIO-S.txt
+Insert EDID data for 1920x1080 Display		DSDT		Patches/Intel_HD3K_1920x1080.txt
+Modify Battery Registers to 8-Bit Values		DSDT		Patches/Battery_Sony-VAIO-S.txt
