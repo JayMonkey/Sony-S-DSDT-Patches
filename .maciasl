@@ -3,5 +3,5 @@
 [2] EDID data for 1600 x 900 Display		DSDT		Patches/Intel_HD3K_1600x900.txt
 [3] EDID data for 1366 x 768 Display		DSDT		Patches/Intel_HD3K_1366x768.txt
 === Sony-S Battery Options ===		DSDT		Patches/NullPatch.txt
-[1] Dual Battery (Internal+Sheet Battery)		DSDT		Patches/Battery_Sony-VAIO-S-Dual.txt
+[1] Dual Battery (Internal+Sheet)		DSDT		Patches/Battery_Sony-VAIO-S-Dual.txt
 [2] Single Battery (Internal Only)		DSDT		Patches/Battery_Sony-VAIO-S-Single.txt
