@@ -1,6 +1,6 @@
 # Maintained by: JayMonkey for: Sony S Laptop Patches
 # Based on code by: RehabMan & johnrey
-# Battery_Sony-VAIO-S.txt
+# Battery_Sony-VAIO-S-Dual.txt
 
 into method label B1B2 remove_entry;
 into definitionblock code_regex . insert

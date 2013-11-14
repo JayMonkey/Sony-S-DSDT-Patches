@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Battery_Sony-VAIO-S.txt"; sourceTree = "<group>"; };
+		693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S-Dual.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Battery_Sony-VAIO-S-Dual.txt"; sourceTree = "<group>"; };
 		693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1920x1080.txt; sourceTree = "<group>"; };
 		693BEE611833F3B6005F9395 /* NullPatch.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = NullPatch.txt; sourceTree = "<group>"; };
 		693BEE621833F492005F9395 /* .maciasl */ = {isa = PBXFileReference; lastKnownFileType = text; path = .maciasl; sourceTree = "<group>"; };
 		693BEE631833F627005F9395 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		693BEE641833F66A005F9395 /* License.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.md; sourceTree = "<group>"; };
+		69ADB44C1835329500D29E9E /* Battery_Sony-VAIO-S-Single.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Battery_Sony-VAIO-S-Single.txt"; sourceTree = "<group>"; };
+		69ADB44D1835331600D29E9E /* Intel_HD3K_1600x900.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1600x900.txt; sourceTree = "<group>"; };
+		69ADB44E183533CD00D29E9E /* Intel_HD3K_1366x768.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1366x768.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -29,8 +32,11 @@
 		693BEE5E1833F3B6005F9395 /* Patches */ = {
 			isa = PBXGroup;
 			children = (
-				693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S.txt */,
+				693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S-Dual.txt */,
+				69ADB44C1835329500D29E9E /* Battery_Sony-VAIO-S-Single.txt */,
 				693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */,
+				69ADB44D1835331600D29E9E /* Intel_HD3K_1600x900.txt */,
+				69ADB44E183533CD00D29E9E /* Intel_HD3K_1366x768.txt */,
 				693BEE611833F3B6005F9395 /* NullPatch.txt */,
 			);
 			path = Patches;
