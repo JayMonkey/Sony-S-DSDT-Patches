@@ -22,5 +22,7 @@ For full instructions on how to install OSX on Sony Vaio VPCSE2C5E and pre patch
 
 http://www.tonymacx86.com/mavericks-laptop-support/114961-jays-monkeybook-pro-ultimate-sony-vpc-se-customac-build.html#post699323
 
+I will be publishing a new guide on how to extract your native DSDT and patch using these to repositorys soon.
+
 Cheers
 Jay
