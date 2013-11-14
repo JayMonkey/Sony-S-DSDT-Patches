@@ -9,7 +9,7 @@ These patches will allow for clean running of OSX Mavericks on a Sony VPC-SE2C5E
 
 To use these patches add the following repo info into MaciASL:-
 
-http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/tree/master
+http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/master
 
 In addition to my DSDT paches you wil also need to use ReHabMans Generic DSDT paches by also adding his repo to MaciASL:-
 
