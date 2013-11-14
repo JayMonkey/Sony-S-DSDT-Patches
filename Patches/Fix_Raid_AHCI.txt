@@ -1,0 +1,20 @@
+# Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
+# Fix_Raid_AHCI.txt
+
+into method label _DSM parent_label SAT0 remove_entry;
+into device label SAT0 insert
+begin
+  Method (_DSM, 4, NotSerialized)\n
+            {\n
+                Store (Package (0x02)\n
+                    {\n
+                        "device-id", \n
+                        Buffer (0x04)\n
+                        {\n
+                            0x81, 0x26, 0x00, 0x00\n
+                        }\n
+                    }, Local0)\n
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
+                Return (Local0)\n
+            }\n
+end;

@@ -16,6 +16,9 @@
 		69ADB44C1835329500D29E9E /* Battery_Sony-VAIO-S-Single.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Battery_Sony-VAIO-S-Single.txt"; sourceTree = "<group>"; };
 		69ADB44D1835331600D29E9E /* Intel_HD3K_1600x900.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1600x900.txt; sourceTree = "<group>"; };
 		69ADB44E183533CD00D29E9E /* Intel_HD3K_1366x768.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Intel_HD3K_1366x768.txt; sourceTree = "<group>"; };
+		69ADB44F183540DE00D29E9E /* Fix_Device_PS2M.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Device_PS2M.txt; sourceTree = "<group>"; };
+		69ADB4511835464000D29E9E /* Fix_Raid_AHCI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Raid_AHCI.txt; sourceTree = "<group>"; };
+		69ADB4521835473800D29E9E /* Fix_Device_HDEF.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Device_HDEF.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -34,6 +37,9 @@
 			children = (
 				693BEE5F1833F3B6005F9395 /* Battery_Sony-VAIO-S-Dual.txt */,
 				69ADB44C1835329500D29E9E /* Battery_Sony-VAIO-S-Single.txt */,
+				69ADB4511835464000D29E9E /* Fix_Raid_AHCI.txt */,
+				69ADB44F183540DE00D29E9E /* Fix_Device_PS2M.txt */,
+				69ADB4521835473800D29E9E /* Fix_Device_HDEF.txt */,
 				693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */,
 				69ADB44D1835331600D29E9E /* Intel_HD3K_1600x900.txt */,
 				69ADB44E183533CD00D29E9E /* Intel_HD3K_1366x768.txt */,
