@@ -1,5 +1,5 @@
 # Maintained by: JayMonkey for: Sony S Laptop Patches
-# Based on code by: RehabMan & johnrey
+# Based on code by: RehabMan & JohnRey
 # Battery_Sony-VAIO-S-Single.txt
 
 into method label B1B2 remove_entry;
