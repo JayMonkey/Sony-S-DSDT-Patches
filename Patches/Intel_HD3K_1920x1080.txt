@@ -2,7 +2,7 @@
 # Intel_HD3K_1920x1080.txt
 
 # Use this patch if your laptop has 1920x1020 Resolution Display
-# Inject HDMI & EDID  & dual-link into GFX0/IGPU
+# Inject HDMI & EDID  & dual-link into IGPU
 
 into method label _DSM parent_adr 0x00020000 remove_entry;
 into device name_adr 0x00020000 insert
