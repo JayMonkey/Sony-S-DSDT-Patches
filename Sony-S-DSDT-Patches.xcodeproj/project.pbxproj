@@ -19,6 +19,7 @@
 		69ADB44F183540DE00D29E9E /* Fix_Device_PS2M.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Device_PS2M.txt; sourceTree = "<group>"; };
 		69ADB4511835464000D29E9E /* Fix_Raid_AHCI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Raid_AHCI.txt; sourceTree = "<group>"; };
 		69ADB4521835473800D29E9E /* Fix_Device_HDEF.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fix_Device_HDEF.txt; sourceTree = "<group>"; };
+		69BEABB018359C36009F9DF9 /* Disable_AMD_GPU.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Disable_AMD_GPU.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -39,6 +40,7 @@
 				69ADB44C1835329500D29E9E /* Battery_Sony-VAIO-S-Single.txt */,
 				69ADB4511835464000D29E9E /* Fix_Raid_AHCI.txt */,
 				69ADB44F183540DE00D29E9E /* Fix_Device_PS2M.txt */,
+				69BEABB018359C36009F9DF9 /* Disable_AMD_GPU.txt */,
 				69ADB4521835473800D29E9E /* Fix_Device_HDEF.txt */,
 				693BEE601833F3B6005F9395 /* Intel_HD3K_1920x1080.txt */,
 				69ADB44D1835331600D29E9E /* Intel_HD3K_1600x900.txt */,
