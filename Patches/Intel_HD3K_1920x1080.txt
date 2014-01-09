@@ -7,7 +7,7 @@
 into method label _DSM parent_adr 0x00020000 remove_entry;
 into device name_adr 0x00020000 insert
 begin
-Method (_DSM, 4, NotSerialized)\
+Method (_DSM, 4, NotSerialized)\n
             {\n
                 Store (Package (0x0C)\n
                     {\n
@@ -61,7 +61,7 @@ Method (_DSM, 4, NotSerialized)\
                             /* 0070 */    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,\n
                             /* 0078 */    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7\n
                         }\n
-                    }, Local0)/n
+                    }, Local0)\n
                 DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
                 Return (Local0)\n
 \n
