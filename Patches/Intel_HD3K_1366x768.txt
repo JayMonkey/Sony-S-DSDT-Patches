@@ -1,7 +1,7 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
-# Intel_HD3K_1600x900.txt
+# Intel_HD3K_1366x768.txt
 
-# Use this patch if your laptop has 1600x900 Resolution Display
+# Use this patch if your laptop has 1366x768 Resolution Display
 # Inject HDMI & EDID into IGPU
 
 into method label _DSM parent_adr 0x00020000 remove_entry;
