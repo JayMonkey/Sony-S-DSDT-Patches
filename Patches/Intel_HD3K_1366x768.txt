@@ -2,14 +2,14 @@
 # Intel_HD3K_1600x900.txt
 
 # Use this patch if your laptop has 1600x900 Resolution Display
-# Inject HDMI & EDID  & dual-link into IGPU
+# Inject HDMI & EDID into IGPU
 
 into method label _DSM parent_adr 0x00020000 remove_entry;
 into device name_adr 0x00020000 insert
 begin
 Method (_DSM, 4, NotSerialized)\
             {\n
-                Store (Package (0x0C)\n
+                Store (Package (0x0B)\n
                     {\n
                         "AAPL,NumFramebuffers",\n
                         Buffer (0x04)\n
