@@ -7,7 +7,9 @@ https://github.com/RehabMan/OS-X-MaciASL-patchmatic
 
 These patches will allow for clean running of OSX Mavericks on a Sony VPC-SE2C5E Laptop, However most of the patches will be generic for all Sony Vaio S series laptops (SA/SB/SC). Certain patches will require specific variants for items such as the display resolution and support for the Sony Sheet battery option. 
 
-Add the follwing URL to MaciASL->Preferences->Sources
+Update: 9th Jan 2014
+
+The above patches are now public and redy for beta test, aAdd the follwing URL to MaciASL->Preferences->Sources
 
 Name: JayMonkey
 URL: http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/master
@@ -16,7 +18,9 @@ For full instructions on how to install OSX Mavericks on Sony Vaio VPCSE2C5E lap
 
 http://www.tonymacx86.com/mavericks-laptop-support/114961-jays-monkeybook-pro-ultimate-sony-vpc-se-customac-build.html#post699323
 
-These pattches should be used in conjunction with ReHabMans generic laptop patches which you can also use with MaciASL by adding the following URL under MaciASL->Preferences->Sources
+If you are using the DSDT that I provide in the guide then you should only need to user the three EDID injection patches to change the screen resolution and panel options.
+
+If you are starting with a native DSDT then these pattches should be used in conjunction with ReHabMans generic laptop patches which you can also use with MaciASL by adding the following URL under MaciASL->Preferences->Sources
 
 Name: ReHabMan
 URL: http://raw.github.com/RehabMan/Laptop-DSDT-Patch/master
