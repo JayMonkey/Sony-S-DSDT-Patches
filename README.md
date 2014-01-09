@@ -15,6 +15,10 @@ For full instructions on how to install OSX Mavericks on Sony Vaio VPCSE2C5E lap
 
 http://www.tonymacx86.com/mavericks-laptop-support/114961-jays-monkeybook-pro-ultimate-sony-vpc-se-customac-build.html#post699323
 
+These pattches should be used in conjunction with ReHabMans generic laptop patches which you can also use with MaciASL by adding the following URL.
+
+http://raw.github.com/RehabMan/Laptop-DSDT-Patch/master
+
 I will be publishing a new guide on how to extract your native DSDT and patch it using these edits soon.
 
 Cheers
