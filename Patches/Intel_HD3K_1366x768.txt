@@ -23,12 +23,6 @@ Method (_DSM, 4, NotSerialized)\
                             0x16, 0x01, 0x00, 0x00\n
                         },\n
 \n
-                        "AAPL00,DualLink",\n
-                        Buffer (0x04)\n
-                        {\n
-                            0x01, 0x00, 0x00, 0x00\n
-                        },\n
-\n
                         "hda-gfx",\n
                         Buffer (0x0A)\n
                         {\n
