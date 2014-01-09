@@ -32,7 +32,7 @@ Method (_DSM, 4, NotSerialized)\n
                         "hda-gfx",\n
                         Buffer (0x0A)\n
                         {\n
-                            "onboard-2"\n
+                                    "onboard-2"\n
                         },\n
 \n
                         "AAPL,snb-platform-id",\n
@@ -64,5 +64,7 @@ Method (_DSM, 4, NotSerialized)\n
                     }, Local0)\n
                 DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
                 Return (Local0)\n
+                }\n
+            }\n
 \n
 end;
