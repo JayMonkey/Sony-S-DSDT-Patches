@@ -23,11 +23,13 @@ Method (_DSM, 4, NotSerialized)\n
                             0x16, 0x01, 0x00, 0x00\n
                         },\n
 \n
+\n
                         "AAPL00,DualLink",\n
                         Buffer (0x04)\n
                         {\n
                             0x01, 0x00, 0x00, 0x00\n
                         },\n
+\n
 \n
                         "hda-gfx",\n
                         Buffer (0x0A)\n
@@ -35,11 +37,13 @@ Method (_DSM, 4, NotSerialized)\n
                             "onboard-2"\n
                         },\n
 \n
+\n
                         "AAPL,snb-platform-id",\n
                         Buffer (0x04)\n
                         {\n
                             0x00, 0x00, 0x01, 0x00\n
                         }, \n
+\n
 \n
                         "AAPL00,override-no-edid",\n
                         Buffer (0x80)\n
