@@ -1,10 +1,124 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
 # Disable_AMD_GPU.txt
 
-into device label MCHC parent_label PCI0 remove_entry;
+into scope label _SB
 into device label PCI0 insert begin
 Device (MCHC)\n
 {\n
         Name (_ADR, Zero)\n
 }
 end;
+
+
+
+        INTO Scope (_SB)
+
+    Method (POFF, 0, NotSerialized)
+    {
+        \_SB.PCI0.PEG0.PEGP._OFF ()
+    }
+    
+    
+    
+    into method label _WAK code_regex \s*(.?WAK\s+\([^)]*\)) replace_matched
+begin
+    
+     POFF ()
+        \_SB.PCI0.IGPU.DD02._BCM (BRTL)
+        If (LOr (LLess (Arg0, One), LGreater (Arg0, 0x05)))
+        {
+            Store (0x03, Arg0)
+        }
+
+        Store (Zero, P80D)
+end;
+        
+        
+        
+        into device PEG0
+        
+        Name (ELCT, Zero)
+                Name (HVID, Zero)
+                Name (HDID, Zero)
+                OperationRegion (PCIS, PCI_Config, Zero, 0x0100)
+                Field (PCIS, DWordAcc, Lock, Preserve)
+                {
+                    DVID,   16, 
+                    Offset (0x2C), 
+                    SVID,   16, 
+                    SDID,   16, 
+                    Offset (0x4C), 
+                    WVID,   16, 
+                    WDID,   16
+                }
+
+                Name (B0D1, Zero)
+                OperationRegion (PCAP, SystemMemory, Or (PEBS, 0x8000, B0D1), 0xC0)
+                Field (PCAP, DWordAcc, NoLock, Preserve)
+                {
+                    Offset (0xB0), 
+                    LCTL,   16
+                }
+
+                OperationRegion (GPIO, SystemIO, 0x0500, 0x60)
+                Field (GPIO, ByteAcc, Lock, Preserve)
+                {
+                    Offset (0x0C), 
+                        ,   17, 
+                    PO17,   1, 
+                    Offset (0x38), 
+                        ,   3, 
+                    PO35,   1
+                }
+
+                Method (PWRE, 0, Serialized)
+                {
+                    Store (Zero, PO17)
+                    Store (One, PO35)
+                    Sleep (0x96)
+                    Store (One, PO17)
+                    Sleep (0x64)
+                }
+
+                Method (PWRD, 0, Serialized)
+                {
+                    Store (Zero, PO17)
+                    Store (Zero, PO35)
+                }
+
+                Method (_ON, 0, Serialized)  // _ON_: Power On
+                {
+                    PWRE ()
+                    Store (Zero, LNKD)
+                    While (LLess (LNKS, 0x07))
+                    {
+                        Sleep (One)
+                    }
+
+                    Store (HVID, WVID)
+                    Store (HDID, WDID)
+                    Or (And (ELCT, 0x43), And (LCTL, 0xFFBC), LCTL)
+                    Notify (PEG0, Zero)
+                }
+
+                Method (_OFF, 0, Serialized)  // _OFF: Power Off
+                {
+                    Store (LCTL, ELCT)
+                    Store (SVID, HVID)
+                    Store (SDID, HDID)
+                    Store (One, LNKD)
+                    While (LLess (LNKS, Zero))
+                    {
+                        Sleep (One)
+                    }
+
+                    PWRD ()
+                    Notify (PEG0, Zero)
+                }
+                
+                
+                
+                
+                into device IGPU
+                
+                                POFF ()
