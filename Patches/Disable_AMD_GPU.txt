@@ -1,14 +1,6 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
 # Disable_AMD_GPU.txt
 
-into scope label _SB
-into device label PCI0 insert begin
-Device (MCHC)\n
-{\n
-        Name (_ADR, Zero)\n
-}
-end;
-
 
 
         INTO Scope (_SB)
