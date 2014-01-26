@@ -1,6 +1,28 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
 # Disable_AMD_GPU.txt
 
+# ******** WORK IN PROGRESS 
+
+
+into device (peg0)
+
+
+     OperationRegion (RPCI, PCI_Config, Zero, 0xF0)
+            Field (RPCI, DWordAcc, Lock, Preserve)
+            {
+                        Offset (0xB0), 
+                ASPM,   2, 
+                    ,   2, 
+                LNKD,   1
+            }
+
+            OperationRegion (RPCX, SystemMemory, XBAS, 0x8400)
+            Field (RPCX, DWordAcc, NoLock, Preserve)
+            {
+                        Offset (0x8214), 
+                        Offset (0x8216), 
+                LNKS,   4
+            }
 
 
         INTO Scope (_SB)
