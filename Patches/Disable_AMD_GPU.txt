@@ -1,7 +1,7 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
 # Disable_AMD_GPU.txt
 
-# ******** WORK IN PROGRESS 
+# ******** WORK IN PROGRESS ********* DO NOT TRY TO RUN ***********
 
 
 into device (peg0)
