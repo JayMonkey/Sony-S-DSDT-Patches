@@ -46,29 +46,29 @@ into_all method label _BST code_regex \(B2RC, replaceall_matched begin (B1B2 (YR
 # Activate Dynamic BAT1 device
 into method label _STA parent_label BAT1 replace_content
 begin
-		If (And (BNUM, One))
-			{
-			Return (0x1F)
-			}
-		Return (0x0B)
+		If (And (BNUM, One))\n
+			{\n
+			Return (0x1F)\n
+			}\n
+		Return (0x0B)\n
 end;
 
 # Activate Dynaminc BAT2 device
 into method label _STA parent_label BAT2 replace_content
 begin
-		If (And (BNUM, 0x02))
-			{
-			Return (0x1F)
-			}
-		Return (0x0B)
+		If (And (BNUM, 0x02))\n
+			{\n
+			Return (0x1F)\n
+			}\n
+		Return (0x0B)\n
 end;
 
 # Activate Dynamic H_EC device
 into method label _STA parent_label H_EC replace_content
 begin
-		If (LEqual (ECON, One))
-		{
-			Return (0x0F)
-		}
-		Return (Zero)
+		If (LEqual (ECON, One))\n
+		{\n
+			Return (0x0F)\n
+		}\n
+		Return (Zero)\n
 end;
