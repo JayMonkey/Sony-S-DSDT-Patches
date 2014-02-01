@@ -2,6 +2,7 @@
 [1] EDID data for 1920 x 1080 Display		DSDT		Patches/Intel_HD3K_1920x1080.txt
 [2] EDID data for 1600 x 900 Display		DSDT		Patches/Intel_HD3K_1600x900.txt
 [3] EDID data for 1366 x 768 Display		DSDT		Patches/Intel_HD3K_1366x768.txt
+[4] Disable AMD GPU		DSDT		Patches/Disable_AMD_GPU.txt
 === Sony-S Battery Options ===		DSDT		Patches/NullPatch.txt
 [1] Set to Dual/Single Dynamic Mode		DSDT		Patches/Battery_Sony-VAIO-S-Dual.txt
 [2] Set to Fixed Single Battery Mode		DSDT		Patches/Battery_Sony-VAIO-S-Single.txt
