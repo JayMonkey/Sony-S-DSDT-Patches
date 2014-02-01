@@ -4,135 +4,126 @@
 # ******** WORK IN PROGRESS ********* DO NOT TRY TO RUN ***********
 
 
-into device (peg0)
 
-
-     OperationRegion (RPCI, PCI_Config, Zero, 0xF0)
-            Field (RPCI, DWordAcc, Lock, Preserve)
-            {
-                        Offset (0xB0), 
-                ASPM,   2, 
-                    ,   2, 
-                LNKD,   1
-            }
-
-            OperationRegion (RPCX, SystemMemory, XBAS, 0x8400)
-            Field (RPCX, DWordAcc, NoLock, Preserve)
-            {
-                        Offset (0x8214), 
-                        Offset (0x8216), 
-                LNKS,   4
-            }
-
-
-        INTO Scope (_SB)
-
-    Method (POFF, 0, NotSerialized)
-    {
-        \_SB.PCI0.PEG0.PEGP._OFF ()
-    }
-    
-    
-    
-    into method label _WAK code_regex \s*(.?WAK\s+\([^)]*\)) replace_matched
+into method label POFF remove_entry;
+into definitionblock code_regex . insert
 begin
+Scope (\_SB)\n
+{\n
+    Method (POFF, 0, NotSerialized)\n
+    {\n
+        \_SB.PCI0.PEG0.PEGP._OFF ()\n
+    }\n
+end
     
-     POFF ()
-        \_SB.PCI0.IGPU.DD02._BCM (BRTL)
-        If (LOr (LLess (Arg0, One), LGreater (Arg0, 0x05)))
-        {
-            Store (0x03, Arg0)
-        }
-
-        Store (Zero, P80D)
+    
+into method label _WAK replace_matched
+begin
+		POFF ()\n
+// Brightness		\_SB.PCI0.IGPU.DD02._BCM (BRTL)\n
 end;
+
         
-        
-        
-        into device PEG0
-        
-        Name (ELCT, Zero)
-                Name (HVID, Zero)
-                Name (HDID, Zero)
-                OperationRegion (PCIS, PCI_Config, Zero, 0x0100)
-                Field (PCIS, DWordAcc, Lock, Preserve)
-                {
-                    DVID,   16, 
-                    Offset (0x2C), 
-                    SVID,   16, 
-                    SDID,   16, 
-                    Offset (0x4C), 
-                    WVID,   16, 
-                    WDID,   16
-                }
+into device name_adr 0x00010000 replace_matched
+begin
+     OperationRegion (RPCI, PCI_Config, Zero, 0xF0)\n
+            Field (RPCI, DWordAcc, Lock, Preserve)\n
+            {\n
+                        Offset (0xB0), \n
+                ASPM,   2, \n
+                    ,   2, \n
+                LNKD,   1\n
+            }\n
+\n
+            OperationRegion (RPCX, SystemMemory, XBAS, 0x8400)\n
+            Field (RPCX, DWordAcc, NoLock, Preserve)\n
+            {\n
+                        Offset (0x8214), \n
+                        Offset (0x8216), \n
+                LNKS,   4\n
+            }\n
+\n
+        Name (ELCT, Zero)\n
+                Name (HVID, Zero)\n
+                Name (HDID, Zero)\n
+                OperationRegion (PCIS, PCI_Config, Zero, 0x0100)\n
+                Field (PCIS, DWordAcc, Lock, Preserve)\n
+                {\n
+                    DVID,   16, \n
+                    Offset (0x2C),\n
+                    SVID,   16, \n
+                    SDID,   16, \n
+                    Offset (0x4C),\n
+                    WVID,   16, \n
+                    WDID,   16\n
+                }\n
+\n
+                Name (B0D1, Zero)\n
+                OperationRegion (PCAP, SystemMemory, Or (PEBS, 0x8000, B0D1), 0xC0)\n
+                Field (PCAP, DWordAcc, NoLock, Preserve)\n
+                {\n
+                    Offset (0xB0), \n
+                    LCTL,   16\n
+                }\n
+\n
+                OperationRegion (GPIO, SystemIO, 0x0500, 0x60)\n
+                Field (GPIO, ByteAcc, Lock, Preserve)\n
+                {\n
+                    Offset (0x0C), \n
+                        ,   17, \n
+                    PO17,   1, \n
+                    Offset (0x38), \n
+                        ,   3, \n
+                    PO35,   1\n
+                }\n
+\n
+                Method (PWRE, 0, Serialized)\n
+                {\n
+                    Store (Zero, PO17)\n
+                    Store (One, PO35)\n
+                    Sleep (0x96)\n
+                    Store (One, PO17)\n
+                    Sleep (0x64)\n
+                }\n
 
-                Name (B0D1, Zero)
-                OperationRegion (PCAP, SystemMemory, Or (PEBS, 0x8000, B0D1), 0xC0)
-                Field (PCAP, DWordAcc, NoLock, Preserve)
-                {
-                    Offset (0xB0), 
-                    LCTL,   16
-                }
+                Method (PWRD, 0, Serialized)\n
+                {\n
+                    Store (Zero, PO17)\n
+                    Store (Zero, PO35)\n
+                }\n
+\n
+                Method (_ON, 0, Serialized)  // _ON_: Power On\n
+                {\n
+                    PWRE ()\n
+                    Store (Zero, LNKD)\n
+                    While (LLess (LNKS, 0x07))\n
+                    {\n
+                        Sleep (One)\n
+                    }\n
+\n
+                    Store (HVID, WVID)\n
+                    Store (HDID, WDID)\n
+                    Or (And (ELCT, 0x43), And (LCTL, 0xFFBC), LCTL)\n
+                    Notify (PEG0, Zero)\n
+                }\n
+\n
+                Method (_OFF, 0, Serialized)  // _OFF: Power Off\n
+                {\n
+                    Store (LCTL, ELCT)\n
+                    Store (SVID, HVID)\n
+                    Store (SDID, HDID)\n
+                    Store (One, LNKD)\n
+                    While (LLess (LNKS, Zero))\n
+                    {\n
+                        Sleep (One)\n
+                    }\n
+\n
+                    PWRD ()\n
+                    Notify (PEG0, Zero)\n
+                }\n
+end
 
-                OperationRegion (GPIO, SystemIO, 0x0500, 0x60)
-                Field (GPIO, ByteAcc, Lock, Preserve)
-                {
-                    Offset (0x0C), 
-                        ,   17, 
-                    PO17,   1, 
-                    Offset (0x38), 
-                        ,   3, 
-                    PO35,   1
-                }
-
-                Method (PWRE, 0, Serialized)
-                {
-                    Store (Zero, PO17)
-                    Store (One, PO35)
-                    Sleep (0x96)
-                    Store (One, PO17)
-                    Sleep (0x64)
-                }
-
-                Method (PWRD, 0, Serialized)
-                {
-                    Store (Zero, PO17)
-                    Store (Zero, PO35)
-                }
-
-                Method (_ON, 0, Serialized)  // _ON_: Power On
-                {
-                    PWRE ()
-                    Store (Zero, LNKD)
-                    While (LLess (LNKS, 0x07))
-                    {
-                        Sleep (One)
-                    }
-
-                    Store (HVID, WVID)
-                    Store (HDID, WDID)
-                    Or (And (ELCT, 0x43), And (LCTL, 0xFFBC), LCTL)
-                    Notify (PEG0, Zero)
-                }
-
-                Method (_OFF, 0, Serialized)  // _OFF: Power Off
-                {
-                    Store (LCTL, ELCT)
-                    Store (SVID, HVID)
-                    Store (SDID, HDID)
-                    Store (One, LNKD)
-                    While (LLess (LNKS, Zero))
-                    {
-                        Sleep (One)
-                    }
-
-                    PWRD ()
-                    Notify (PEG0, Zero)
-                }
-                
-                
-                
-                
-                into device IGPU
-                
-                                POFF ()
+into device name_adr 0x00020000 replace_matched
+begin
+				POFF ()/n
+end
