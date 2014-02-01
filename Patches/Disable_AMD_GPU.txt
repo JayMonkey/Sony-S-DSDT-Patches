@@ -21,7 +21,7 @@ into method label _WAK replace_matched
 begin
 		POFF ()\n
 // Brightness		\_SB.PCI0.IGPU.DD02._BCM (BRTL)\n
-end;
+end
 
         
 into device name_adr 0x00010000 replace_matched
