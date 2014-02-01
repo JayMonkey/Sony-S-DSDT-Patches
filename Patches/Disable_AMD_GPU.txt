@@ -1,20 +1,17 @@
 # Maintained by: JayMonkey for: Sony Vaio-S Serires Laptop Patches
 # Disable_AMD_GPU.txt
 
-# ******** WORK IN PROGRESS ********* DO NOT TRY TO RUN ***********
-
+# ******** WORK IN PROGRESS ********* EXPERIMENTAL *********
 
 
 into method label POFF remove_entry;
 into definitionblock code_regex . insert
 begin
-Scope (\_SB)\n
-{\n
     Method (POFF, 0, NotSerialized)\n
     {\n
         \_SB.PCI0.PEG0.PEGP._OFF ()\n
     }\n
-end
+end;
     
     
 into method label _WAK replace_matched
