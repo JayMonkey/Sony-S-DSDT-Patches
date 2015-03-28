@@ -1,19 +1,22 @@
 Sony Vaio-S DSDT Patches
 ========================
 
-I am currently working on a series of DSDT patches for use with MaciASL, I recommend using ReHabMan's fork of MaciASL available for download here :-
+I am currently working on a series of DSDT/SSDT patches for use with MaciASL
 
-https://github.com/RehabMan/OS-X-MaciASL-patchmatic
+These patches will allow for clean running of OSX Mavericks & Yosemite on a Sony VPC-SE2C5E Laptop, However most of the patches will be generic for all Sony Vaio S series laptops (SA/SB/SC). Certain patches will require specific variants for items such as the display resolution and support for the Sony Sheet battery option (Mavericks Only)
 
-These patches will allow for clean running of OSX Mavericks on a Sony VPC-SE2C5E Laptop, However most of the patches will be generic for all Sony Vaio S series laptops (SA/SB/SC). Certain patches will require specific variants for items such as the display resolution and support for the Sony Sheet battery option. 
+Please note that the 'Disable ATI GPU' patch is experimental and may need some manual fine tuning to work on your laptop if not Vaio SE2. I have since moved to using a patched SSDT to disable the ATI GPU. I've left the patch in the repo for those who want to experiment.
+
+Update 28th March 2015
+----------------------
+
+Updated repo with SSDT patch to remove unused Pkg Buffer placeholders which resolves the PARSEOP erros when compiling.
 
 
+How to Use
+----------
 
-
-Update: 9th Jan 2014
---------------------
-
-I have made some of my patches public and redy for beta test, in order to use them please add the follwing REPO to {MaciASL->Preferences->Sources}
+Add the follwing REPO to {MaciASL->Preferences->Sources}
 
 Name: JayMonkey
 URL: http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/master
@@ -29,7 +32,9 @@ If you are starting with a native DSDT then these pattches should be used in con
 Name: ReHabMan
 URL: http://raw.github.com/RehabMan/Laptop-DSDT-Patch/master
 
-I will be publishing a new guide on how to extract your native DSDT and patch it using these edits sometime in the future.
+For more info on patching a DSDT for Sony S serires laptops see my post on the latest guieds thread :-
+
+http://www.tonymacx86.com/yosemite-laptop-guides/156533-guide-update-sony-s-series-clover-yosemite-8.html#post997754
 
 Cheers and good luck.
 Jay
