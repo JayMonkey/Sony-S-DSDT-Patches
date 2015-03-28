@@ -38,5 +38,6 @@ For more info on patching a DSDT for Sony S serires laptops see my post on the l
 
 http://www.tonymacx86.com/yosemite-laptop-guides/156533-guide-update-sony-s-series-clover-yosemite-8.html#post997754
 
-Cheers and good luck.
+Cheers
+
 Jay
