@@ -16,20 +16,22 @@ Updated repo with SSDT patch to remove unused Pkg Buffer placeholders which reso
 How to Use
 ----------
 
-Add the follwing REPO to {MaciASL->Preferences->Sources}
+Add the my REPO to {MaciASL->Preferences->Sources}
 
 Name: JayMonkey
+
 URL: http://raw.github.com/JayMonkey/Sony-S-DSDT-Patches/master
 
-For full instructions on how to install OSX Mavericks on Sony Vaio VPCSE2C5E laptop and a pre-patched DSDT please see my guide at TonyMacx86:-
+See my guides for instructions on how to install OSX on Sony Vaio VPCSE2C5E
 
-http://www.tonymacx86.com/mavericks-laptop-support/114961-jays-monkeybook-pro-ultimate-sony-vpc-se-customac-build.html#post699323
+Mavericks Guide: http://www.tonymacx86.com/mavericks-laptop-support/114961-jays-monkeybook-pro-ultimate-sony-vpc-se-customac-build.html#post699323
 
-If you are using the DSDT that I provide in the guide then you should only need to use one of the three EDID injection patches to change the screen resolution and panel options to suit your Sony Vaio model (SA/SB/SC/SE)
+Yosemiet Guide: http://www.tonymacx86.com/yosemite-laptop-guides/156533-guide-update-sony-s-series-clover-yosemite.html
 
 If you are starting with a native DSDT then these pattches should be used in conjunction with ReHabMans generic laptop patches which you can also use with MaciASL by adding the following REPO to {MaciASL->Preferences->Sources}
 
 Name: ReHabMan
+
 URL: http://raw.github.com/RehabMan/Laptop-DSDT-Patch/master
 
 For more info on patching a DSDT for Sony S serires laptops see my post on the latest guieds thread :-
