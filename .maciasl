@@ -10,3 +10,5 @@
 [1] Fix Device PS2M		DSDT		Patches/Fix_Device_PS2M.txt
 [2] Fix Device HDEF		DSDT		Patches/Fix_Device_HDEF.txt
 [3] Fix Raid AHCI		DSDT		Patches/Fix_Raid_AHCI.txt
+=== Sony-S SSDT Patches ===		DSDT		Patches/NullPatch.txt
+[1] Remove Unused Pkg Buffer Placeholders		DSDT		Fix_PARSEOP.txt
