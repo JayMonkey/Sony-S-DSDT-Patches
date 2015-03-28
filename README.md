@@ -10,7 +10,7 @@ Please note that the 'Disable ATI GPU' patch is experimental and may need some m
 Update 28th March 2015
 ----------------------
 
-Added a new SSDT patch to remove the unused Package buffer(s) placeholders which resolves the PARSEOP erros when compiling the CPU power managment SSDT (SDDT-2).
+Added a new SSDT patch to remove the unused Package buffer(s) placeholders which resolves the PARSEOP erros when compiling the CPU power managment SSDT (SDDT-2) - credit to RehabMan
 
 
 How to Use
