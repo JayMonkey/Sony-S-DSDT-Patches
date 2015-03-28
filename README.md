@@ -3,14 +3,14 @@ Sony Vaio-S DSDT Patches
 
 I am currently working on a series of DSDT/SSDT patches for use with MaciASL
 
-These patches will allow for clean running of OSX Mavericks & Yosemite on a Sony VPC-SE2C5E Laptop, However most of the patches will be generic for all Sony Vaio S series laptops (SA/SB/SC). Certain patches will require specific variants for items such as the display resolution and support for the Sony Sheet battery option (Mavericks Only)
+These patches should allow for clean running of OS X Mavericks & Yosemite on a Sony VPC-SE2C5E Laptop,  most of the patches will be generic for all Sony Vaio S series laptops (SA/SB/SC). Certain patches will require specific variants for items such as the display resolution (EDID) and the Sony Sheet battery option (works on Mavericks only)
 
-Please note that the 'Disable ATI GPU' patch is experimental and may need some manual fine tuning to work on your laptop if not Vaio SE2. I have since moved to using a patched SSDT to disable the ATI GPU. I've left the patch in the repo for those who want to experiment.
+Please note that the 'Disable ATI GPU' patch is experimental and may need some manual fine-tuning to get it to work on your laptop if it's not a Vaio SE2. I have since moved to using a patched SSDT (SSDT-7) to disable the ATI GPU. I've left the Disable GPU patch in the repo for those who want to experiment or see what it does.
 
 Update 28th March 2015
 ----------------------
 
-Updated the repo with a SSDT patch to remove the unused Package buffer(s) placeholders which resolves the PARSEOP erros when compiling the CPU power managment SSDT (SDDT-2).
+Added a new SSDT patch to remove the unused Package buffer(s) placeholders which resolves the PARSEOP erros when compiling the CPU power managment SSDT (SDDT-2).
 
 
 How to Use
